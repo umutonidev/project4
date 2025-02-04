@@ -1,0 +1,139 @@
+/* General Styles */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(248, 244, 244, 0.1);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.left-top, .right-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.icon sup {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: rgb(222, 12, 12);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+
+.category-dropdown, .search-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.search-input {
+  width: 200px;
+}
+
+.search-button {
+  background: hsl(266, 93%, 45%);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0056b3;
+  color: white;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: bolder;
+  color: #ccc;
+}
+
+.nav-links li:hover {
+  color: #ffd700;
+}
+
+.phone-number {
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .nav-links ul {
+    gap: 20px;
+  }
+  .search-input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-navbar, .main-navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+  .left-top, .right-top {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .search-input, .search-button {
+    width: 100%;
+  }
+}
